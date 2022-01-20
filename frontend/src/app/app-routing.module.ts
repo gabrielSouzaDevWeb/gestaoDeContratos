@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
 import { ContratosCrudComponent } from './views/contratos-crud/contratos-crud.component';
+import { PrestadoresCrudComponent } from './views/prestadores-crud/prestadores-crud.component';
 
 const routes: Routes = [{
   path:"",
@@ -12,8 +13,11 @@ const routes: Routes = [{
   path: "contratos",
   component: ContratosCrudComponent
 },{
-  path: "contratos/prestador",
+  path: "contratos/cadastro",
   component: CadastroPrestadorCreateComponent
+},{
+  path:"prestadores",
+  component: PrestadoresCrudComponent
 }];
 
 @NgModule({

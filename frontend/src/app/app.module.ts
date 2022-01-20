@@ -19,6 +19,7 @@ import { ContratosCrudComponent } from './views/contratos-crud/contratos-crud.co
 //diretivas:
 import { PrimaryColorFontDirective } from './directives/primary-color-font.directive';
 import { CadastroPrestadorCreateComponent } from './components/cadastro/cadastro-prestador-create/cadastro-prestador-create.component';
+import { PrestadoresCrudComponent } from './views/prestadores-crud/prestadores-crud.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CadastroPrestadorCreateComponent } from './components/cadastro/cadastro
     HomeComponent,
     ContratosCrudComponent,
     PrimaryColorFontDirective,
-    CadastroPrestadorCreateComponent
+    CadastroPrestadorCreateComponent,
+    PrestadoresCrudComponent
     
   ],
   imports: [
