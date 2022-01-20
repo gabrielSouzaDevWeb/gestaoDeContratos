@@ -16,13 +16,13 @@ const routes: Routes = [{
   component: ContratosCrudComponent
 },{
   path: "contratos/cadastro",
-  component: CadastroPrestadorCreateComponent
+  component: CadastroContratoCreateComponent 
 },{
   path:"prestadores",
   component: PrestadoresCrudComponent
 },{
   path:"prestadores/cadastro",
-  component: CadastroContratoCreateComponent
+  component: CadastroPrestadorCreateComponent
 }];
 
 @NgModule({

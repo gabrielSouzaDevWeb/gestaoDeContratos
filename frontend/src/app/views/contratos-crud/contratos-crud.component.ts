@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-Contratos-crud',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContratosCrudComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  navigateToCadastroContratoCreate(): void {
+    this.router.navigate(['/contratos/cadastro'])
+    
+  }
 
   ngOnInit(): void {
   }

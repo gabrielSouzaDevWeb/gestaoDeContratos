@@ -1,4 +1,6 @@
+import { CadastroContratosService } from './../cadastro-contratos.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-cadastro-contrato-create',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroContratoCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cadastroContratosService: CadastroContratosService, private router: Router) { }
 
   ngOnInit(): void {
   }
+  
+  createCadastro():void{
+    this.cadastroContratosService.showMessage('Cadastrado com Sucesso!!')
 
+  }
+  
+  cancel():void{
+    this.router.navigate(["/contratos"])
+
+  }
 }

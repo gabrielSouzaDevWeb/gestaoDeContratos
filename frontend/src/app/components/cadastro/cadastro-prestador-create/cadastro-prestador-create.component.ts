@@ -1,4 +1,7 @@
+
+import { CadastroPrestadorService } from '../cadastro-prestador.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-prestador-create',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroPrestadorCreateComponent implements OnInit {
 
-  constructor() { }
+  propLegal = "qualquer"
+
+  constructor(private cadastroPrestadorService: CadastroPrestadorService,private router:Router) { }
 
   ngOnInit(): void {
+  }
+  
+  createCadastro():void{
+    this.cadastroPrestadorService.showMessage('Cadastrado com Sucesso!!')
+
+  }
+  
+  cancel():void{
+    this.router.navigate(["/prestadores"])
+
   }
 
 }
