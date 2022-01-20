@@ -1,2 +1,27 @@
-# gestaoDeContratos
-## Objetivo  Criar um sistema controle de contratos tendo como backend uma REST API em Nodejs com typescript, utilizando o banco de dados Postgresql e com front-end em Angular. Conforme história de usuário abaixo:  “Como gestor de contratos preciso controlar os vencimentos dos meus contratos para não perder os prazos de renovação.”  Critérios de aceite Deve ser possível cadastrar os prestadores de serviços (CRUD); Deve ser possível cadastrar os contratos (CRUD); Cada tela (prestadores de serviço e contratos) deve conter uma listagem dos registros cadastrados; Deve ser permitido cadastrar um endereço caso o CEP não seja encontrado;  O sistema deverá ter as seguintes telas: Cadastro prestador Tipo (pessoa física ou pessoa jurídica) CPF ou CNPJ (dependendo do tipo selecionado) Nome ou Razão Social (dependendo do tipo selecionado) Email Endereço CEP (fazer uso da api viacep) Logradouro  Número  Complemento Bairro Cidade UF  Cadastro contrato CPF ou CNPJ do prestador (consultar no cadastro de prestador) Nome ou Razão Social (apenas visualização) Serviço Prestado  Vigência do contrato Data de início  Data de fim     Dashboard Totais de contratos  cadastrados Totais de prestadores cadastrados  API  Deve consumir a api do viacep e entregar os dados para o frontend (o viacep não ser consumido diretamente pelo frontend). Deve fazer uso dos verbos HTTP e os status code HTTP.   ## Requisitos do desafio  Feito com tecnologias da stack proposta podendo usar bibliotecas e templates (sugestão de biblioteca - https://ng.ant.design/docs/introduce/en); Criar um banco normalizado; Disponibilizar código no github (enviar o link do projeto quando finalizar).  ## Critérios de avaliação  Verificação das funcionalidades; Organização do código; Normalização do banco; Nível de conhecimentos nos frameworks.   ## Prazo de entrega 7 dias (a partir do recebimento deste desafio). 
+# Frontend
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
