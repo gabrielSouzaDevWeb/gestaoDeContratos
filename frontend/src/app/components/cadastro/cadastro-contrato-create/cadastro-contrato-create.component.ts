@@ -11,12 +11,12 @@ import { Router } from "@angular/router";
 export class CadastroContratoCreateComponent implements OnInit {
 
   cadastroContratos: CadastroContrato = {
-      CPFOrCNPJ:"122.796.123-16",
-      nome:"Jean Gomes",
-      servico:"fullstack",
+      CPFOrCNPJ:"",
+      nome:"",
+      servico:"",
       vigencia:{
-        inicio:"01/02/2021",
-        fim: "01/02/2024"
+        inicio:"",
+        fim: ""
       }
   }
 

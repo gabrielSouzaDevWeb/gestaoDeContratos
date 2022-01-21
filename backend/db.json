@@ -120,6 +120,70 @@
         "UF": "pb"
       },
       "id": 9
+    },
+    {
+      "tipo": "",
+      "CPFOrCNPJ": "",
+      "nome": "",
+      "email": "",
+      "endereco": {
+        "CEP": "",
+        "logradouro": "",
+        "complemento": "",
+        "numero": null,
+        "bairro": "",
+        "cidade": "",
+        "UF": ""
+      },
+      "id": 10
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "050.719.144-11",
+      "nome": "Gabriel Souza",
+      "email": "gabriel14.gl40@gmail.com",
+      "endereco": {
+        "CEP": "58330-000",
+        "logradouro": "pappa",
+        "complemento": "Próximo ao PSF-V",
+        "numero": "238",
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "PE"
+      },
+      "id": 11
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "111.111.111-11",
+      "nome": "jjjjjjjj",
+      "email": "gabrjfkdlapa@gmail.com",
+      "endereco": {
+        "CEP": "999999-99",
+        "logradouro": "aaaaaaa",
+        "complemento": "bbbbbbb",
+        "numero": "999",
+        "bairro": "cccccccc",
+        "cidade": "ddddddd",
+        "UF": "EE"
+      },
+      "id": 12
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "222.222.222-22",
+      "nome": "zzzzzzzz",
+      "email": "xxxxxxxxxx",
+      "endereco": {
+        "CEP": "000000-00",
+        "logradouro": "cccccccccc",
+        "complemento": "vvvvvvvv",
+        "numero": "bbbbbb",
+        "bairro": "nnnnnnn",
+        "cidade": "mmmmmmmm",
+        "UF": "pa"
+      },
+      "id": 13
     }
   ],
   "contratos": [
@@ -212,6 +276,26 @@
         "fim": "01/02/2024"
       },
       "id": 9
+    },
+    {
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "João",
+      "servico": "front-end",
+      "vigencia": {
+        "inicio": "18/10/2005",
+        "fim": "18/10/2009"
+      },
+      "id": 10
+    },
+    {
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "zzzzzzzz",
+      "servico": "front",
+      "vigencia": {
+        "inicio": "18/10/2005",
+        "fim": "18/10/2022"
+      },
+      "id": 11
     }
   ]
 }
