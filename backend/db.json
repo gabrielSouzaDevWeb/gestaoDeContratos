@@ -74,6 +74,52 @@
         "UF": "PB"
       },
       "id": 6
+    },
+    {
+      "tipo": "Pessoa física",
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Souza",
+      "email": "Gabrielsouzadevweb@gmail.com",
+      "endereco": {
+        "CEP": "583300-00",
+        "logradouro": "Rua Paraná",
+        "numero": 238,
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "PB"
+      },
+      "id": 7
+    },
+    {
+      "tipo": "Pessoa física",
+      "CPFOrCNPJ": "123.456.789-10",
+      "nome": "Gabriel Souza",
+      "email": "Gabrielsouzadevweb@gmail.com",
+      "endereco": {
+        "CEP": "583300-00",
+        "logradouro": "Rua Paraná",
+        "numero": 238,
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "PB"
+      },
+      "id": 8
+    },
+    {
+      "tipo": "Pessoa física",
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Souza",
+      "email": "gabriel14.gl40@gmail.com",
+      "endereco": {
+        "CEP": "58330-000",
+        "logradouro": "pappa",
+        "complemento": "qrqrq",
+        "numero": "238",
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "pb"
+      },
+      "id": 9
     }
   ],
   "contratos": [

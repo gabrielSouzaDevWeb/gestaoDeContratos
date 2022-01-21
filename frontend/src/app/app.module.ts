@@ -25,6 +25,9 @@ import { CadastroPrestadorCreateComponent } from './components/cadastro/cadastro
 import { PrestadoresCrudComponent } from './views/prestadores-crud/prestadores-crud.component';
 import { CadastroContratoCreateComponent } from './components/cadastro/cadastro-contrato-create/cadastro-contrato-create.component';
 
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInput, MatInputModule } from '@angular/material/input'
 
 @NgModule({
   declarations: [
@@ -51,6 +54,9 @@ import { CadastroContratoCreateComponent } from './components/cadastro/cadastro-
     MatButtonModule,
     MatSnackBarModule,
     HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
 
   ],
   providers: [],

@@ -10,19 +10,22 @@ import { Router } from '@angular/router';
 })
 export class CadastroPrestadorCreateComponent implements OnInit {
 
-  CadastroPrestador: CadastroPrestador ={
+  
+
+  cadastroPrestador: CadastroPrestador ={
     
-      tipo: "Pessoa física",
-      CPFOrCNPJ: "132.719.644-16",
-      nome: "Gabriel Souza",
-      email: "Gabrielsouzadevweb@gmail.com",
+      tipo: "",
+      CPFOrCNPJ: "",
+      nome: "",
+      email: "",
       endereco: {
-        CEP: "583300-00",
-        logradouro: "Rua Paraná",
-        numero: 238,
-        bairro: "centro",
-        cidade: "Juripiranga",
-        UF: "PB"
+        CEP: "",
+        logradouro: "",
+        complemento:"",
+        numero: null,
+        bairro: "",
+        cidade: "",
+        UF: "",
       }
   }
 
@@ -32,7 +35,7 @@ export class CadastroPrestadorCreateComponent implements OnInit {
   }
   
   createCadastroPrestador():void{
-    this.cadastroPrestadorService.create(this.CadastroPrestador).subscribe(()=>{
+    this.cadastroPrestadorService.create(this.cadastroPrestador).subscribe(()=>{
       this.cadastroPrestadorService.showMessage('Cadastrado com Sucesso!!')
       this.router.navigate(["/prestadores"])
       
