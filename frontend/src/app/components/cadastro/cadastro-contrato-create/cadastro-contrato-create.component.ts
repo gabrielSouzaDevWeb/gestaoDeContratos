@@ -11,8 +11,13 @@ import { Router } from "@angular/router";
 export class CadastroContratoCreateComponent implements OnInit {
 
   cadastroContratos: CadastroContrato = {
-    name: 'Cadastro de Teste',
-    price:125.98
+      CPFOrCNPJ:"122.796.123-16",
+      nome:"Jean Gomes",
+      servico:"fullstack",
+      vigencia:{
+        inicio:"01/02/2021",
+        fim: "01/02/2024"
+      }
   }
 
   constructor(private cadastroContratosService: CadastroContratosService,
@@ -21,7 +26,7 @@ export class CadastroContratoCreateComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  createCadastro():void{
+  createCadastroContrato():void{
     this.cadastroContratosService.create(this.cadastroContratos).subscribe(()=>{
       this.cadastroContratosService.showMessage('Cadastrado com Sucesso!!')
       this.router.navigate(["/contratos"])

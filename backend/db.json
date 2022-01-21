@@ -1,19 +1,71 @@
 {
+  "prestadores": [
+    {
+      "id": 2,
+      "tipo": "Pessoa física",
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Souza",
+      "email": "Gabrielsouzadevweb@gmail.com",
+      "endereco": {
+        "CEP": "583300-00",
+        "logradouro": "Rua Paraná",
+        "numero": 238,
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "PB"
+      }
+    }
+  ],
   "contratos": [
     {
       "id": 1,
-      "name": "Caneta BIC Preta",
-      "price": 5.89
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Souza",
+      "servico": "fullstack",
+      "vigencia": {
+        "inicio": "01/02/2022",
+        "fim": "01/02/2025"
+      }
     },
     {
-      "name": "Cadastro de Teste",
-      "price": 125.98,
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Souza",
+      "servico": "fullstack",
+      "vigencia": {
+        "inicio": "01/02/2022",
+        "fim": "01/02/2025"
+      },
       "id": 2
     },
     {
-      "name": "Cadastro de Teste",
-      "price": 125.98,
+      "CPFOrCNPJ": "122.796.123-16",
+      "nome": "Jean Gomes",
+      "servico": "fullstack",
+      "vigencia": {
+        "inicio": "01/02/2021",
+        "fim": "01/02/2024"
+      },
       "id": 3
+    },
+    {
+      "CPFOrCNPJ": "122.796.123-16",
+      "nome": "Jean Gomes",
+      "servico": "fullstack",
+      "vigencia": {
+        "inicio": "01/02/2021",
+        "fim": "01/02/2024"
+      },
+      "id": 4
+    },
+    {
+      "CPFOrCNPJ": "122.796.123-16",
+      "nome": "Jean Gomes",
+      "servico": "fullstack",
+      "vigencia": {
+        "inicio": "01/02/2021",
+        "fim": "01/02/2024"
+      },
+      "id": 5
     }
   ]
 }
