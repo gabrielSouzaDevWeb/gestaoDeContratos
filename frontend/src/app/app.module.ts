@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http'
 
 //componentes
 import { HeaderComponent } from './components/template/header/header.component';
@@ -23,6 +24,7 @@ import { PrimaryColorFontDirective } from './directives/primary-color-font.direc
 import { CadastroPrestadorCreateComponent } from './components/cadastro/cadastro-prestador-create/cadastro-prestador-create.component';
 import { PrestadoresCrudComponent } from './views/prestadores-crud/prestadores-crud.component';
 import { CadastroContratoCreateComponent } from './components/cadastro/cadastro-contrato-create/cadastro-contrato-create.component';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { CadastroContratoCreateComponent } from './components/cadastro/cadastro-
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

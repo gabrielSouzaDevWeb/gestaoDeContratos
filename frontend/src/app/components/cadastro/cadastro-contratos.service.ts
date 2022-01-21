@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { CadastroContrato } from './cadastro-contrato.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +10,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class CadastroContratosService {
 
-  constructor(private MatSnackBar: MatSnackBar) { }
+  baseUrl = "http://localhost:3001/contratos"
+
+  constructor(private MatSnackBar: MatSnackBar, private http: HttpClient) { }
 
   showMessage(msg:string):void{
     this.MatSnackBar.open(msg,'fechar',{
@@ -15,5 +20,9 @@ export class CadastroContratosService {
       horizontalPosition: "right",
       verticalPosition: "top"
     })  
+  }
+
+  create(cadastroContrato: CadastroContrato):Observable<CadastroContrato>{
+    return this.http.post<CadastroContrato>(this.baseUrl, cadastroContrato)
   }
 }

@@ -1,17 +1,19 @@
 {
-   "products":[{
-       "id":1,
-       "name":"Caneta BIC Preta",
-       "price": 5.89
-   },
-   {
-       "id":2,
-       "name":"Notebook Mac Pro",
-       "price": 12000.89
-   },
-   {
-       "id":3,
-       "name":"sansung S20+",
-       "price": 5000.89
-   }]
+  "contratos": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "price": 5.89
+    },
+    {
+      "name": "Cadastro de Teste",
+      "price": 125.98,
+      "id": 2
+    },
+    {
+      "name": "Cadastro de Teste",
+      "price": 125.98,
+      "id": 3
+    }
+  ]
 }
