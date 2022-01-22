@@ -27,7 +27,9 @@ import { CadastroContratoCreateComponent } from './components/cadastro/cadastro-
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInput, MatInputModule } from '@angular/material/input'
+import { MatInput, MatInputModule } from '@angular/material/input';
+import { CadastroPrestadorReadComponent } from './components/cadastro/cadastro-prestador-read/cadastro-prestador-read.component';
+import { CadastroContratoReadComponent } from './components/cadastro/cadastro-contrato-read/cadastro-contrato-read.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { MatInput, MatInputModule } from '@angular/material/input'
     PrimaryColorFontDirective,
     CadastroPrestadorCreateComponent,
     PrestadoresCrudComponent,
-    CadastroContratoCreateComponent
+    CadastroContratoCreateComponent,
+    CadastroPrestadorReadComponent,
+    CadastroContratoReadComponent
     
   ],
   imports: [

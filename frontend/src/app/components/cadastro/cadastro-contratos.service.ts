@@ -25,4 +25,9 @@ export class CadastroContratosService {
   create(cadastroContrato: CadastroContrato):Observable<CadastroContrato>{
     return this.http.post<CadastroContrato>(this.baseUrl, cadastroContrato)
   }
+
+  read():Observable<CadastroContrato[]>{
+    return this.http.get<CadastroContrato[]>(this.baseUrl)
+  }
+  
 }

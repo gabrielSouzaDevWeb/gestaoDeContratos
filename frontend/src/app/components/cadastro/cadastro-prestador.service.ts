@@ -25,4 +25,7 @@ export class CadastroPrestadorService {
   create(cadastroPrestador : CadastroPrestador): Observable<CadastroPrestador>{
     return this.http.post<CadastroPrestador>(this.baseUrl,cadastroPrestador)
   }
+  read():Observable<CadastroPrestador[]>{
+    return this.http.get<CadastroPrestador[]>(this.baseUrl)
+  }
 }
