@@ -4,13 +4,13 @@
     <form>
         <div class="form__line">
             <mat-form-field>
-                <input matInput placeholder="N°CPF ou °CNPJ" [(ngModel)]="cadastroContratos.CPFOrCNPJ" name="CPFOrCNPJ">
+                <input matInput  placeholder="N°CPF ou °CNPJ" [(ngModel)]="cadastroContratos.CPFOrCNPJ" required name="CPFOrCNPJ">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="nome" [(ngModel)]="cadastroContratos.nome" name="nome">
+                <input matInput disabled placeholder="nome" [(ngModel)]="cadastroContratos.nome" name="nome" required>
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Serviço prestado" [(ngModel)]="cadastroContratos.servico" name="servico">
+                <input matInput placeholder="Serviço prestado" [(ngModel)]="cadastroContratos.servico" required name="servico">
             </mat-form-field>
         </div>
         <mat-card-subtitle class="subtitle">
@@ -18,10 +18,10 @@
         </mat-card-subtitle>
         <div class="form__line--around">
             <mat-form-field>
-                <input matInput placeholder="Início" [(ngModel)]="cadastroContratos.vigencia.inicio" name="inicio">
+                <input matInput placeholder="Início" [(ngModel)]="cadastroContratos.vigencia.inicio" required name="inicio">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Fim" [(ngModel)]="cadastroContratos.vigencia.fim" name="fim">
+                <input matInput placeholder="Fim" [(ngModel)]="cadastroContratos.vigencia.fim" required name="fim">
             </mat-form-field>
         </div>
 

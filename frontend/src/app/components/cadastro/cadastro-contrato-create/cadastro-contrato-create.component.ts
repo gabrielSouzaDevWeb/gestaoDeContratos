@@ -12,7 +12,7 @@ export class CadastroContratoCreateComponent implements OnInit {
 
   cadastroContratos: CadastroContrato = {
       CPFOrCNPJ:"",
-      nome:"",
+      nome:"Gabriel Lucas De Souza",
       servico:"",
       vigencia:{
         inicio:"",

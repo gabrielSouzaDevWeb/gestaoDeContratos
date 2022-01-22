@@ -3,18 +3,18 @@
     <form>
         <div class="form__line">
             <mat-form-field>
-                <input matInput placeholder="Tipo" [(ngModel)]="cadastroPrestador.tipo" name="tipo">
+                <input required matInput placeholder="Tipo" [(ngModel)]="cadastroPrestador.tipo" name="tipo">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="N°CPF ou N°CNPJ" [(ngModel)]="cadastroPrestador.CPFOrCNPJ"
+                <input required matInput placeholder="N°CPF ou N°CNPJ" [(ngModel)]="cadastroPrestador.CPFOrCNPJ"
                     name="CPFOrCNPJ">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Nome" [(ngModel)]="cadastroPrestador.nome"
+                <input required matInput placeholder="Nome" [(ngModel)]="cadastroPrestador.nome"
                     name="nome">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="E-mail" [(ngModel)]="cadastroPrestador.email"
+                <input required matInput placeholder="E-mail" [(ngModel)]="cadastroPrestador.email"
                     name="email">
             </mat-form-field>
         </div>
@@ -23,32 +23,32 @@
         </mat-card-subtitle>
         <div class="form__line">
             <mat-form-field>
-                <input matInput placeholder="CEP" [(ngModel)]="cadastroPrestador.endereco.CEP" name="CEP">
+                <input required matInput placeholder="CEP" [(ngModel)]="cadastroPrestador.endereco.CEP" name="CEP">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Logradouro" [(ngModel)]="cadastroPrestador.endereco.logradouro"
+                <input required matInput placeholder="Logradouro" [(ngModel)]="cadastroPrestador.endereco.logradouro"
                     name="logradouro">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Complemento" [(ngModel)]="cadastroPrestador.endereco.complemento"
+                <input required matInput placeholder="Complemento" [(ngModel)]="cadastroPrestador.endereco.complemento"
                 name="complemento">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Numero" [(ngModel)]="cadastroPrestador.endereco.numero"
+                <input required matInput placeholder="Numero" [(ngModel)]="cadastroPrestador.endereco.numero"
                     name="numero">
             </mat-form-field>
             
         </div>
         <div class="form__line">
             <mat-form-field>
-                <input matInput placeholder="Bairro" [(ngModel)]="cadastroPrestador.endereco.bairro" name="bairro">
+                <input required matInput placeholder="Bairro" [(ngModel)]="cadastroPrestador.endereco.bairro" name="bairro">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Cidade" [(ngModel)]="cadastroPrestador.endereco.cidade"
+                <input required matInput placeholder="Cidade" [(ngModel)]="cadastroPrestador.endereco.cidade"
                     name="cidade">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="UF" [(ngModel)]="cadastroPrestador.endereco.UF"
+                <input required matInput placeholder="UF" [(ngModel)]="cadastroPrestador.endereco.UF"
                     name="UF">
             </mat-form-field>
             

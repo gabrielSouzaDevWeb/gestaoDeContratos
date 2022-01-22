@@ -2,6 +2,7 @@ import { CadastroPrestador } from './../cadastro-prestador.model';
 import { CadastroPrestadorService } from '../cadastro-prestador.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormControlName } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-prestador-create',
@@ -42,7 +43,7 @@ export class CadastroPrestadorCreateComponent implements OnInit {
     })
 
   }
-  
+
   cancel():void{
     this.router.navigate(["/prestadores"])
 

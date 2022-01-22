@@ -8,7 +8,7 @@ export interface CadastroPrestador{
     endereco: {
       CEP: string,
       logradouro: string,
-      numero: null,
+      numero: null|number,
       complemento: string,
       bairro: string,
       cidade: string,
