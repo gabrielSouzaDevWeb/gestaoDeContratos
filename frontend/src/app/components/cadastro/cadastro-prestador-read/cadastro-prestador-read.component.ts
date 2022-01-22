@@ -1,4 +1,3 @@
-
 import { CadastroPrestadorService } from './../cadastro-prestador.service';
 import { CadastroPrestador } from './../cadastro-prestador.model';
 import { Component, OnInit } from '@angular/core';
