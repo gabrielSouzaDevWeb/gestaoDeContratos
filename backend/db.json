@@ -312,6 +312,22 @@
         "UF": "EE"
       },
       "id": 21
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Souza",
+      "email": "gabriel14.gl40@gmail.com",
+      "endereco": {
+        "CEP": "58330-000",
+        "logradouro": "Rua parana",
+        "complemento": "Próximo ao PSF-V",
+        "numero": "238",
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "pb"
+      },
+      "id": 22
     }
   ],
   "contratos": [
@@ -524,6 +540,16 @@
         "fim": "18/10/2022"
       },
       "id": 21
+    },
+    {
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Lucas De Souza",
+      "servico": "front-end",
+      "vigencia": {
+        "inicio": "18/10/2005",
+        "fim": "18/10/2009"
+      },
+      "id": 22
     }
   ]
 }
