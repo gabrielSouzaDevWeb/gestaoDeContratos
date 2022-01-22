@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroContratoReadComponent implements OnInit {
 
-  cadastroContrato: CadastroContrato[] |undefined
+  cadastroContrato: CadastroContrato[] =[]
+  displayedColumns= ['id','CPFOrCNPJ','nome','servico','inicio','fim']
 
   constructor(private cadastroContratosService: CadastroContratosService
     ) { }
@@ -17,7 +18,6 @@ export class CadastroContratoReadComponent implements OnInit {
   ngOnInit(): void {
     this.cadastroContratosService.read().subscribe(cadastroContratos =>{
       this.cadastroContrato = cadastroContratos
-      console.log(cadastroContratos);
       
     })
   }

@@ -9,18 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroPrestadorReadComponent implements OnInit {
   
-  cadastroPrestadores: CadastroPrestador[]|undefined
+  cadastroPrestadores: CadastroPrestador[] = [];
+  displayedColumns= ['id','tipo','CPFOrCNPJ','nome',
+  'email','CEP','logradouro','complemento','bairro','cidade','UF']
   
   constructor(private cadastroPrestadorService:CadastroPrestadorService) { }
 
   ngOnInit(): void {
     this.cadastroPrestadorService.read().subscribe(cadastroPrestadores=>{
       this.cadastroPrestadores = cadastroPrestadores
-      console.log(cadastroPrestadores);
-      /**
-       * retrna no log o array de cadastrados
-       */
-      
     })
   }
 

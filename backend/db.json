@@ -280,6 +280,38 @@
         "UF": ""
       },
       "id": 19
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "",
+      "nome": "Gabriel Souza",
+      "email": "gabriel14.gl40@gmail.com",
+      "endereco": {
+        "CEP": "58330-000",
+        "logradouro": "pappa",
+        "complemento": "Próximo ao PSF-V",
+        "numero": "238",
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "EE"
+      },
+      "id": 20
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "6666666666",
+      "nome": "GABRIEL LUCAS DE SOUZA",
+      "email": "gabriel14.gl40@gmail.com",
+      "endereco": {
+        "CEP": "58330000",
+        "logradouro": "pappa",
+        "complemento": "Próximo ao PSF-V",
+        "numero": "238",
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "EE"
+      },
+      "id": 21
     }
   ],
   "contratos": [
@@ -472,6 +504,26 @@
         "fim": "18/10/2009"
       },
       "id": 19
+    },
+    {
+      "CPFOrCNPJ": "111.111.111-11",
+      "nome": "Gabriel Lucas De Souza",
+      "servico": "front",
+      "vigencia": {
+        "inicio": "18/10/2005",
+        "fim": "18/10/2009"
+      },
+      "id": 20
+    },
+    {
+      "CPFOrCNPJ": "111.111.111-11",
+      "nome": "Gabriel Lucas De Souza",
+      "servico": "front-end",
+      "vigencia": {
+        "inicio": "18/10/2005",
+        "fim": "18/10/2022"
+      },
+      "id": 21
     }
   ]
 }

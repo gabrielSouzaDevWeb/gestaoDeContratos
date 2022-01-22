@@ -29,7 +29,11 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { CadastroPrestadorReadComponent } from './components/cadastro/cadastro-prestador-read/cadastro-prestador-read.component';
-import { CadastroContratoReadComponent } from './components/cadastro/cadastro-contrato-read/cadastro-contrato-read.component'
+import { CadastroContratoReadComponent } from './components/cadastro/cadastro-contrato-read/cadastro-contrato-read.component';
+import { CadastroPrestadorRead2Component } from './components/cadastro/cadastro-prestador-read2/cadastro-prestador-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
 
 @NgModule({
   declarations: [
@@ -44,7 +48,8 @@ import { CadastroContratoReadComponent } from './components/cadastro/cadastro-co
     PrestadoresCrudComponent,
     CadastroContratoCreateComponent,
     CadastroPrestadorReadComponent,
-    CadastroContratoReadComponent
+    CadastroContratoReadComponent,
+    CadastroPrestadorRead2Component
     
   ],
   imports: [
@@ -60,7 +65,10 @@ import { CadastroContratoReadComponent } from './components/cadastro/cadastro-co
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
 
   ],
   providers: [],
