@@ -41,7 +41,10 @@ export class CadastroPrestadorUpdateComponent implements OnInit {
   }
 
   updateCadastroPrestador():void{
-
+    this.cadastroPrestadorService.update(this.cadastroPrestador).subscribe(()=>{
+      this.cadastroPrestadorService.showMessage('Prestador atualizado com sucesso!')
+      this.router.navigate(['/prestadores'])
+    })
   }
 
   cancel():void{

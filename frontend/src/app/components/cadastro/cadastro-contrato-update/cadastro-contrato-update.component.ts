@@ -34,7 +34,11 @@ export class CadastroContratoUpdateComponent implements OnInit {
   }
 
   updateCadastroContrato():void{
-
+    this.cadastroContratosService.update(this.cadastroContratos).subscribe(()=>{
+      this.cadastroContratosService.showMessage('Contrato atualizado com sucesso!')
+      this.router.navigate(['/contratos'])
+      
+    })
   }
 
   cancel():void{
