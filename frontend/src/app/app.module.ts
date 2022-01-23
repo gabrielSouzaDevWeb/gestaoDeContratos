@@ -35,7 +35,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { CadastroPrestadorUpdateComponent } from './components/cadastro/cadastro-prestador-update/cadastro-prestador-update.component';
-import { CadastroContratoUpdateComponent } from './components/cadastro/cadastro-contrato-update/cadastro-contrato-update.component'
+import { CadastroContratoUpdateComponent } from './components/cadastro/cadastro-contrato-update/cadastro-contrato-update.component';
+import { CadastroContratoDeleteComponent } from './components/cadastro/cadastro-contrato-delete/cadastro-contrato-delete.component';
+import { CadastroPrestadorDeleteComponent } from './components/cadastro/cadastro-prestador-delete/cadastro-prestador-delete.component'
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { CadastroContratoUpdateComponent } from './components/cadastro/cadastro-
     CadastroContratoReadComponent,
     CadastroPrestadorRead2Component,
     CadastroPrestadorUpdateComponent,
-    CadastroContratoUpdateComponent
+    CadastroContratoUpdateComponent,
+    CadastroContratoDeleteComponent,
+    CadastroPrestadorDeleteComponent
     
   ],
   imports: [

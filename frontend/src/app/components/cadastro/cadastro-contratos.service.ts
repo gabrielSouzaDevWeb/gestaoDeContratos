@@ -38,4 +38,9 @@ export class CadastroContratosService {
     const url = `${this.baseUrl}/${cadastroContrato.id}`
     return this.http.put<CadastroContrato>(url,cadastroContrato)
   }
+
+  delete(id: string): Observable<CadastroContrato>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<CadastroContrato>(url)
+  }
 }

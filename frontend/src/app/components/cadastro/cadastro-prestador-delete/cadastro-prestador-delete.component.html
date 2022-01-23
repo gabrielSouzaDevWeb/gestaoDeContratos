@@ -1,0 +1,69 @@
+<mat-card>
+    <mat-card-title>Excluir prestador</mat-card-title>
+    <form>
+        <div class="form__line">
+            <mat-form-field>
+                <input required matInput placeholder="Tipo" disabled [(ngModel)]="cadastroPrestador.tipo" name="tipo">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="N°CPF ou N°CNPJ" disabled [(ngModel)]="cadastroPrestador.CPFOrCNPJ"
+                    name="CPFOrCNPJ">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="Nome" disabled [(ngModel)]="cadastroPrestador.nome"
+                    name="nome">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="E-mail" disabled [(ngModel)]="cadastroPrestador.email"
+                    name="email">
+            </mat-form-field>
+        </div>
+        <mat-card-subtitle class="subtitle">
+           Endereço:
+        </mat-card-subtitle>
+        <div class="form__line">
+            <mat-form-field>
+                <input required matInput placeholder="CEP" disabled [(ngModel)]="cadastroPrestador.endereco.CEP" name="CEP">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="Logradouro" disabled [(ngModel)]="cadastroPrestador.endereco.logradouro"
+                    name="logradouro">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="Complemento" disabled [(ngModel)]="cadastroPrestador.endereco.complemento"
+                name="complemento">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="Numero" disabled [(ngModel)]="cadastroPrestador.endereco.numero"
+                    name="numero">
+            </mat-form-field>
+            
+        </div>
+        <div class="form__line">
+            <mat-form-field>
+                <input required matInput placeholder="Bairro" disabled [(ngModel)]="cadastroPrestador.endereco.bairro" name="bairro">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="Cidade" disabled [(ngModel)]="cadastroPrestador.endereco.cidade"
+                    name="cidade">
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput placeholder="UF" disabled [(ngModel)]="cadastroPrestador.endereco.UF"
+                    name="UF">
+            </mat-form-field>
+            
+            
+        </div>
+
+
+
+
+    </form>
+    <button mat-raised-button class="primaryColorBG" (click)="deleteCadastroPrestador()" color="warn">
+        Apagar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

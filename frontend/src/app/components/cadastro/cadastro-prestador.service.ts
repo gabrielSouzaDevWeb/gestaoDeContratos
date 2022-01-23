@@ -14,27 +14,32 @@ export class CadastroPrestadorService {
 
   constructor(private MatSnackBar: MatSnackBar, private http: HttpClient) { }
 
-  showMessage(msg:string):void{
-    this.MatSnackBar.open(msg,'fechar',{
-      duration:3000,
+  showMessage(msg: string): void {
+    this.MatSnackBar.open(msg, 'fechar', {
+      duration: 3000,
       horizontalPosition: "right",
       verticalPosition: "top"
-    })  
+    })
   }
 
-  create(cadastroPrestador : CadastroPrestador): Observable<CadastroPrestador>{
-    return this.http.post<CadastroPrestador>(this.baseUrl,cadastroPrestador)
+  create(cadastroPrestador: CadastroPrestador): Observable<CadastroPrestador> {
+    return this.http.post<CadastroPrestador>(this.baseUrl, cadastroPrestador)
   }
-  read():Observable<CadastroPrestador[]>{
+  read(): Observable<CadastroPrestador[]> {
     return this.http.get<CadastroPrestador[]>(this.baseUrl)
   }
-  ReadById(id:string):Observable<CadastroPrestador>{
+  ReadById(id: string): Observable<CadastroPrestador> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<CadastroPrestador>(url)
   }
 
-  update(cadastroPrestador:CadastroPrestador):Observable<CadastroPrestador> {
+  update(cadastroPrestador: CadastroPrestador): Observable<CadastroPrestador> {
     const url = `${this.baseUrl}/${cadastroPrestador.id}`
-    return this.http.put<CadastroPrestador>(url,cadastroPrestador)
+    return this.http.put<CadastroPrestador>(url, cadastroPrestador)
+  }
+
+  delete(id: string): Observable<CadastroPrestador> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<CadastroPrestador>(url)
   }
 }

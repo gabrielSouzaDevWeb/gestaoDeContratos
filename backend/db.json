@@ -1,81 +1,6 @@
 {
   "prestadores": [
     {
-      "id": 2,
-      "tipo": "Pessoa física",
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Jean Escamoso",
-      "email": "Gabrielsouzadevweb@gmail.com",
-      "endereco": {
-        "CEP": "583300-00",
-        "logradouro": "Rua Paraná",
-        "numero": 238,
-        "bairro": "centro",
-        "cidade": "Juripiranga",
-        "UF": "PB"
-      }
-    },
-    {
-      "tipo": "Pessoa física",
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Gabriel Souza",
-      "email": "Gabrielsouzadevweb@gmail.com",
-      "endereco": {
-        "CEP": "583300-00",
-        "logradouro": "Rua Paraná",
-        "numero": 238,
-        "bairro": "centro",
-        "cidade": "Juripiranga",
-        "UF": "PB"
-      },
-      "id": 3
-    },
-    {
-      "tipo": "Pessoa física",
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Gabriel Souza",
-      "email": "Gabrielsouzadevweb@gmail.com",
-      "endereco": {
-        "CEP": "583300-00",
-        "logradouro": "Rua Paraná",
-        "numero": 238,
-        "bairro": "centro",
-        "cidade": "Juripiranga",
-        "UF": "PB"
-      },
-      "id": 4
-    },
-    {
-      "tipo": "Pessoa física",
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Gabriel Souza",
-      "email": "Gabrielsouzadevweb@gmail.com",
-      "endereco": {
-        "CEP": "583300-00",
-        "logradouro": "Rua Paraná",
-        "numero": 238,
-        "bairro": "centro",
-        "cidade": "Juripiranga",
-        "UF": "PB"
-      },
-      "id": 5
-    },
-    {
-      "tipo": "Pessoa física",
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Gabriel Souza",
-      "email": "Gabrielsouzadevweb@gmail.com",
-      "endereco": {
-        "CEP": "583300-00",
-        "logradouro": "Rua Paraná",
-        "numero": 238,
-        "bairro": "centro",
-        "cidade": "Juripiranga",
-        "UF": "PB"
-      },
-      "id": 6
-    },
-    {
       "tipo": "Pessoa física",
       "CPFOrCNPJ": "132.719.644-16",
       "nome": "Gabriel Souza",
@@ -347,26 +272,6 @@
     }
   ],
   "contratos": [
-    {
-      "id": 1,
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Gabriel Souza",
-      "servico": "fullstack",
-      "vigencia": {
-        "inicio": "01/02/2022",
-        "fim": "01/02/2025"
-      }
-    },
-    {
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Gabriel Souza",
-      "servico": "fullstack",
-      "vigencia": {
-        "inicio": "01/02/2022",
-        "fim": "01/02/2025"
-      },
-      "id": 2
-    },
     {
       "CPFOrCNPJ": "122.796.123-16",
       "nome": "Jean Gomes",

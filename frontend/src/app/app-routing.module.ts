@@ -1,3 +1,4 @@
+import { CadastroPrestadorDeleteComponent } from './components/cadastro/cadastro-prestador-delete/cadastro-prestador-delete.component';
 import { CadastroPrestadorUpdateComponent } from './components/cadastro/cadastro-prestador-update/cadastro-prestador-update.component';
 import { CadastroContratoUpdateComponent } from './components/cadastro/cadastro-contrato-update/cadastro-contrato-update.component';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,7 @@ import { PrestadoresCrudComponent } from './views/prestadores-crud/prestadores-c
 
 import { CadastroContratoCreateComponent } from './components/cadastro/cadastro-contrato-create/cadastro-contrato-create.component';
 import { CadastroPrestadorCreateComponent } from './components/cadastro/cadastro-prestador-create/cadastro-prestador-create.component';
+import { CadastroContratoDeleteComponent } from './components/cadastro/cadastro-contrato-delete/cadastro-contrato-delete.component';
 
 const routes: Routes = [{
   path:"",
@@ -31,6 +33,12 @@ const routes: Routes = [{
 },{
   path: "contratos/update/:id",
   component: CadastroContratoUpdateComponent
+},{
+  path:"prestadores/delete/:id",
+  component: CadastroPrestadorDeleteComponent
+},{
+  path: "contratos/delete/:id",
+  component: CadastroContratoDeleteComponent
 }];
 
 @NgModule({
