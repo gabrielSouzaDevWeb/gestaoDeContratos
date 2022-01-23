@@ -1,1 +1,41 @@
-<p>cadastro-contrato-update works!</p>
+<mat-card>
+
+    <mat-card-title>Alterar Cadastro</mat-card-title>
+    <form>
+        <div class="form__line">
+            <mat-form-field>
+                <input matInput  placeholder="N°CPF ou °CNPJ" [(ngModel)]="cadastroContratos.CPFOrCNPJ" required name="CPFOrCNPJ">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput disabled placeholder="nome" [(ngModel)]="cadastroContratos.nome" name="nome" required>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Serviço prestado" [(ngModel)]="cadastroContratos.servico" required name="servico">
+            </mat-form-field>
+        </div>
+        <mat-card-subtitle class="subtitle">
+          Vigência:
+        </mat-card-subtitle>
+        <div class="form__line--around">
+            <mat-form-field>
+                <input matInput placeholder="Início" [(ngModel)]="cadastroContratos.vigencia.inicio" required name="inicio">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Fim" [(ngModel)]="cadastroContratos.vigencia.fim" required name="fim">
+            </mat-form-field>
+        </div>
+
+
+
+
+    </form>
+
+    <button mat-raised-button (click)="updateCadastroContrato()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" >
+        cancelar
+    </button>
+
+</mat-card>

@@ -328,6 +328,22 @@
         "UF": "pb"
       },
       "id": 22
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "69244296622",
+      "nome": "Jean Escamoso",
+      "email": "Jeanreidelas69@gmail.com",
+      "endereco": {
+        "CEP": "884466100",
+        "logradouro": "Rua do pinguelo",
+        "complemento": "do lado do cabaré",
+        "numero": "69",
+        "bairro": "sapucaia",
+        "cidade": "Timbabala",
+        "UF": "PE"
+      },
+      "id": 23
     }
   ],
   "contratos": [
