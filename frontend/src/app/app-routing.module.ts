@@ -1,3 +1,5 @@
+import { CadastroPrestadorUpdateComponent } from './components/cadastro/cadastro-prestador-update/cadastro-prestador-update.component';
+import { CadastroContratoUpdateComponent } from './components/cadastro/cadastro-contrato-update/cadastro-contrato-update.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
@@ -23,6 +25,12 @@ const routes: Routes = [{
 },{
   path:"prestadores/cadastro",
   component: CadastroPrestadorCreateComponent
+},{
+  path:"prestadores/update/:id",
+  component: CadastroPrestadorUpdateComponent
+},{
+  path: "contratos/update/:id",
+  component: CadastroContratoUpdateComponent
 }];
 
 @NgModule({

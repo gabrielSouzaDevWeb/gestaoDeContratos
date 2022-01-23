@@ -11,7 +11,7 @@ export class CadastroPrestadorReadComponent implements OnInit {
   
   cadastroPrestadores: CadastroPrestador[] = [];
   displayedColumns= ['id','tipo','CPFOrCNPJ','nome',
-  'email','CEP','logradouro','complemento','bairro','cidade','UF']
+'email','CEP','logradouro','complemento','bairro','cidade','UF','action']
   
   constructor(private cadastroPrestadorService:CadastroPrestadorService) { }
 

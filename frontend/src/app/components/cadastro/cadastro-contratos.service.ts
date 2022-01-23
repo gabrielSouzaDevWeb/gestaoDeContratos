@@ -29,5 +29,13 @@ export class CadastroContratosService {
   read():Observable<CadastroContrato[]>{
     return this.http.get<CadastroContrato[]>(this.baseUrl)
   }
-  
+  ReadById(id:string):Observable<CadastroContrato>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<CadastroContrato>(url)
+  }
+
+  update(cadastroContrato:CadastroContrato):Observable<CadastroContrato> {
+    const url = `${this.baseUrl}/${cadastroContrato.id}`
+    return this.http.put<CadastroContrato>(url,cadastroContrato)
+  }
 }

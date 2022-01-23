@@ -1,3 +1,4 @@
+import { CadastroContrato } from './cadastro-contrato.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -27,5 +28,14 @@ export class CadastroPrestadorService {
   }
   read():Observable<CadastroPrestador[]>{
     return this.http.get<CadastroPrestador[]>(this.baseUrl)
+  }
+  ReadById(id:string):Observable<CadastroPrestador>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<CadastroPrestador>(url)
+  }
+
+  update(cadastroPrestador:CadastroPrestador):Observable<CadastroPrestador> {
+    const url = `${this.baseUrl}/${cadastroPrestador.id}`
+    return this.http.put<CadastroPrestador>(url,cadastroPrestador)
   }
 }

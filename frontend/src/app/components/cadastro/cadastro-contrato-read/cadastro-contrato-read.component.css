@@ -7,3 +7,11 @@
 tr:nth-child(odd) {
     background: #FFF
 }
+i.edit{
+  color: #00cd26;
+  margin: 0 10px 0 5px;
+}
+
+i.delete{
+  color:#e35e6b;
+}
