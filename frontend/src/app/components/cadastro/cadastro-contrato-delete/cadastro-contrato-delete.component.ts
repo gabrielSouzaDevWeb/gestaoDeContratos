@@ -12,7 +12,7 @@ export class CadastroContratoDeleteComponent implements OnInit {
 
   cadastroContratos: CadastroContrato = {
     CPFOrCNPJ:"",
-    nome:"Gabriel Lucas De Souza",
+    nome:"",
     servico:"",
     vigencia:{
       inicio:"",

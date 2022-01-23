@@ -1,7 +1,9 @@
+import { map } from 'rxjs/operators';
+import { EMPTY, Observable } from 'rxjs';
+import { catchError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
 import { CadastroContrato } from './cadastro-contrato.model';
 
 @Injectable({
@@ -14,16 +16,25 @@ export class CadastroContratosService {
 
   constructor(private MatSnackBar: MatSnackBar, private http: HttpClient) { }
 
-  showMessage(msg:string):void{
+  showMessage(msg:string, isError: boolean = false):void{
     this.MatSnackBar.open(msg,'fechar',{
       duration:3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: isError?['msg-error']:['msg-success']
     })  
   }
 
   create(cadastroContrato: CadastroContrato):Observable<CadastroContrato>{
-    return this.http.post<CadastroContrato>(this.baseUrl, cadastroContrato)
+    return this.http.post<CadastroContrato>(this.baseUrl, cadastroContrato).pipe(
+      map(obj => obj),
+      catchError((e) => this.errorHandler(e))
+    )
+  }
+
+  errorHandler(e: any): Observable<any> {
+    this.showMessage('Ocorreu um erro!', true)
+    return EMPTY;
   }
 
   read():Observable<CadastroContrato[]>{

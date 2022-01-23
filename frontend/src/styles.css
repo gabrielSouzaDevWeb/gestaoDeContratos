@@ -9,3 +9,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .primaryColorBG{ background-color: #204184;}
 .primaryColorFont{color:#204184}
 .secondaryColorBG{background-color:#0099ff ;}
+
+.msg-success{
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.msg-error{
+    background-color:#a72845;
+    color: #ffffff;
+}

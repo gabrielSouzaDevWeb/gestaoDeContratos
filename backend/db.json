@@ -1,38 +1,6 @@
 {
   "prestadores": [
     {
-      "tipo": "Pessoa física",
-      "CPFOrCNPJ": "132.719.644-16",
-      "nome": "Gabriel Souza",
-      "email": "gabriel14.gl40@gmail.com",
-      "endereco": {
-        "CEP": "58330-000",
-        "logradouro": "pappa",
-        "complemento": "qrqrq",
-        "numero": "238",
-        "bairro": "centro",
-        "cidade": "Juripiranga",
-        "UF": "pb"
-      },
-      "id": 9
-    },
-    {
-      "tipo": "cpf",
-      "CPFOrCNPJ": "050.719.144-11",
-      "nome": "Gabriel Souza",
-      "email": "gabriel14.gl40@gmail.com",
-      "endereco": {
-        "CEP": "58330-000",
-        "logradouro": "pappa",
-        "complemento": "Próximo ao PSF-V",
-        "numero": "238",
-        "bairro": "centro",
-        "cidade": "Juripiranga",
-        "UF": "PE"
-      },
-      "id": 11
-    },
-    {
       "tipo": "cpf",
       "CPFOrCNPJ": "111.111.111-11",
       "nome": "jjjjjjjj",
@@ -143,6 +111,38 @@
         "UF": "PE"
       },
       "id": 23
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "GABRIEL LUCAS DE SOUZA",
+      "email": "gabriel14.gl40@gmail.com",
+      "endereco": {
+        "CEP": "58330000",
+        "logradouro": "pappa",
+        "complemento": "Próximo ao PSF-V",
+        "numero": "238",
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "EE"
+      },
+      "id": 24
+    },
+    {
+      "tipo": "cpf",
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Souza",
+      "email": "gabriel14.gl40@gmail.com",
+      "endereco": {
+        "CEP": "58330-000",
+        "logradouro": "pappa",
+        "complemento": "Próximo ao PSF-V",
+        "numero": "999",
+        "bairro": "centro",
+        "cidade": "Juripiranga",
+        "UF": "pb"
+      },
+      "id": 25
     }
   ],
   "contratos": [
@@ -305,6 +305,16 @@
         "fim": "18/10/2009"
       },
       "id": 22
+    },
+    {
+      "CPFOrCNPJ": "132.719.644-16",
+      "nome": "Gabriel Lucas De Souza",
+      "servico": "front-end",
+      "vigencia": {
+        "inicio": "18/10/2005",
+        "fim": "18/10/2022"
+      },
+      "id": 23
     }
   ]
 }
