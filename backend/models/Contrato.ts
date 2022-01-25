@@ -1,10 +1,9 @@
+import Vigencia from "./Vigencia"
+
 export default interface Contrato{
     id?: number
-    CPFOrCNPJ:string
-    nome:string
-    servico:string
-    vigencia:{
-        inicio:string,
-        fim: string
-    }
+    prestador_id: number
+    servico_prestado:string
+    data_inicio:string
+    data_fim: string
 }

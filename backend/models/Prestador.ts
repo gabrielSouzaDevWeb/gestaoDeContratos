@@ -1,17 +1,9 @@
-export interface Prestador{
-
+export default interface Prestador{
     id?: number,
     tipo: string,
-    CPFOrCNPJ: string,
-    nome: string,
+    cpf: string | undefined,
+    cnpj: string | undefined,
+    nome: string | undefined,
+    razao_social: string | undefined
     email: string,
-    endereco: {
-      CEP: string,
-      logradouro: string,
-      numero: null,
-      complemento: string,
-      bairro: string,
-      cidade: string,
-      UF: string
-    }
 }

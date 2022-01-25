@@ -11,8 +11,8 @@ export default class ContratosController{
 
         this.app.get("/contratos",                  this.contratoService.read)
         this.app.get("/contratos/:contratoId",     this.contratoService.findById)
-        this.app.post("/contratos",                 this.contratoService.create)
-        this.app.put("/contratos/:contratoId",     this.contratoService.update)
+        //this.app.post("/contratos",                 this.contratoService.create)
+        //this.app.put("/contratos/:contratoId",     this.contratoService.update)
         this.app.delete("/contratos/:contratoId",  this.contratoService.delete)
     }
 
