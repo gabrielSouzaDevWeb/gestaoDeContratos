@@ -1,4 +1,4 @@
 export default interface Vigencia {
-    inicio: string | undefined,
-    fim: string | undefined,
+    inicio: string,
+    fim: string ,
 }

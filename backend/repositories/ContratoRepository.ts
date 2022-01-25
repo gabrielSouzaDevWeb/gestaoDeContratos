@@ -9,11 +9,11 @@ export default class ContratoRepository{
        this.db = new Postgres()
     }
 
-    // public async create(contrato: Contrato) : Promise<Contrato>{
-    //     const { rows } = await this.db.client.query(`INSERT INTO contratos (prestador_id, servico_prestado, data_inicio, data_fim) VALUES ($1,$2,$3,$4) RETURNING *`,
-    //     [contrato.prestador_id, contrato.servico, contrato.vigencia.inicio, contrato.vigencia.fim])
-    //     return rows[0];
-    // }
+    public async create(contrato: Contrato) : Promise<Contrato>{
+        const { rows } = await this.db.client.query(`INSERT INTO contratos (prestador_id, servico_prestado, data_inicio, data_fim) VALUES ($1,$2,$3,$4) RETURNING *`,
+        [contrato.prestador_id, contrato.servico_prestado, contrato.data_inicio, contrato.data_fim])
+        return rows[0];
+    }
 
     public async read() {
         let futureResult;
@@ -37,15 +37,11 @@ export default class ContratoRepository{
         return futureResult;
     }
 
-    // public async update(contrato: Contrato, contratoId: Number) : Promise<Contrato>{
-    //     const prestador_id = 1
-    //     const servicoPrestado = contrato.servico
-    //     const dataInicio = contrato.vigencia.inicio
-    //     const dataFim = contrato.vigencia.fim
-    //     const { rows } = await this.db.client.query(`UPDATE contratos SET prestador_id = $1, servico_prestado = $2, data_inicio = $3, data_fim = $4 where id = $5 RETURNING *`,
-    //     [prestador_id, servicoPrestado, dataInicio, dataFim, contratoId])
-    //     return rows[0];
-    // }
+    public async update(contrato: Contrato, contratoId: Number) : Promise<Contrato>{
+        const { rows } = await this.db.client.query(`UPDATE contratos SET prestador_id = $1, servico_prestado = $2, data_inicio = $3, data_fim = $4 where id = $5 RETURNING *`,
+        [contrato.prestador_id, contrato.servico_prestado, contrato.data_inicio, contrato.data_fim, contratoId])
+        return rows[0];
+    }
 
     public async delete(contratoId: Number) : Promise<Contrato>{
         const { rows } = await this.db.client.query(`DELETE FROM contratos where id = $1`,

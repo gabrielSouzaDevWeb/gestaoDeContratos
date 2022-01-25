@@ -37,11 +37,13 @@ export default class ContratoDTO{
     }
 
     public toEntity(): Contrato {
+        const vigencia: Vigencia = new VigenciaDTO(this.vigencia).toEntity()
         let contrato: Contrato = {
-            CPFOrCNPJ: this.CPFOrCNPJ,
-            nome: this.nome,
-            servico: this.servico,
-            vigencia:  new VigenciaDTO(this.vigencia).toEntity(),
+            id: this.id,
+            prestador_id: this.prestadorId,
+            servico_prestado: this.servico,
+            data_inicio: vigencia.inicio,
+            data_fim: vigencia.fim,
         };
         return contrato;
     }

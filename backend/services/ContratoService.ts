@@ -50,14 +50,14 @@ export default class ContratoService {
         })
     }
 
-    // public update = (req: Request, res: Response) => {
-    //     const contratoId: number =  Number.parseInt(req.params.contratoId) 
-    //     const contrato: Contrato = req.body
-    //     this.contratoRepository.update(contrato, contratoId)
-    //     .then(result =>{
-    //         res.send(new UpdatedResponse(result).getBody())
-    //     })
-    // }
+    public update = (req: Request, res: Response) => {
+        const contratoId: number =  Number.parseInt(req.params.contratoId) 
+        const contrato: Contrato = new ContratoDTO(req.body).toEntity()
+        this.contratoRepository.update(contrato, contratoId)
+        .then(result =>{
+            res.send(result)
+        })
+    }
 
     public delete = (req: Request, res: Response) => {
         const contratoId: number =  Number.parseInt(req.params.contratoId) 
