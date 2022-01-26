@@ -25,7 +25,7 @@ import { CadastroPrestadorCreateComponent } from './components/cadastro/cadastro
 import { PrestadoresCrudComponent } from './views/prestadores-crud/prestadores-crud.component';
 import { CadastroContratoCreateComponent } from './components/cadastro/cadastro-contrato-create/cadastro-contrato-create.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { CadastroPrestadorReadComponent } from './components/cadastro/cadastro-prestador-read/cadastro-prestador-read.component';
@@ -38,6 +38,9 @@ import { CadastroPrestadorUpdateComponent } from './components/cadastro/cadastro
 import { CadastroContratoUpdateComponent } from './components/cadastro/cadastro-contrato-update/cadastro-contrato-update.component';
 import { CadastroContratoDeleteComponent } from './components/cadastro/cadastro-contrato-delete/cadastro-contrato-delete.component';
 import { CadastroPrestadorDeleteComponent } from './components/cadastro/cadastro-prestador-delete/cadastro-prestador-delete.component'
+import { DateAdapter, MatOptionModule, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,7 @@ import { CadastroPrestadorDeleteComponent } from './components/cadastro/cadastro
     CadastroContratoUpdateComponent,
     CadastroContratoDeleteComponent,
     CadastroPrestadorDeleteComponent
-    
+
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,11 @@ import { CadastroPrestadorDeleteComponent } from './components/cadastro/cadastro
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule,
+    MatOptionModule,
+    ReactiveFormsModule,
+    MatDatepickerModule
 
   ],
   providers: [],

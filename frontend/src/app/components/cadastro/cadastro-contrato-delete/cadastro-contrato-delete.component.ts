@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class CadastroContratoDeleteComponent implements OnInit {
 
   cadastroContratos: CadastroContrato = {
+    prestadorId: 0,
     CPFOrCNPJ:"",
     nome:"",
     servico:"",

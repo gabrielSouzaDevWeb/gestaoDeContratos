@@ -11,6 +11,7 @@ export default class EnderecoDTO{
     private UF: string 
 
     constructor(data?: any){
+        this.id = data?.id
         this.CEP = data?.CEP
         this.logradouro = data?.logradouro
         this.numero = data?.numero
@@ -30,15 +31,12 @@ export default class EnderecoDTO{
         enderecoDto.bairro = endereco.bairro
         enderecoDto.cidade = endereco.cidade
         enderecoDto.UF = endereco.uf
-
-        console.log(endereco)
-
-
         return enderecoDto;
     }
 
     public toEntity(): Endereco {
         let endereco: Endereco = {
+            id: this.id,
             cep: this.CEP,
             logradouro: this.logradouro,
             numero: this.numero,

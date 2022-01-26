@@ -28,7 +28,7 @@ export default class EnderecoRepository{
         return futureResult;
     }
 
-    public async update(endereco: Endereco, enderecoId: Number | undefined) : Promise<Endereco>{
+    public async update(endereco: Endereco) : Promise<Endereco>{
         const cep = endereco.cep
         const logradouro = endereco.logradouro
         const numero = endereco.numero
@@ -37,9 +37,9 @@ export default class EnderecoRepository{
         const cidade = endereco.cidade
         const uf = endereco.uf
        
-        const { rows } = await this.db.client.query(`UPDATE prestadores_enderecos SET (cep = $1, logradouro = $2, numero = $3, complemento = $4, bairro = $5,
-             cidade = $6, uf = $7) where id = $8 RETURNING *`,
-        [cep, logradouro, numero, complemento, bairro, cidade, uf, enderecoId])
+        const { rows } = await this.db.client.query(`UPDATE prestadores_enderecos SET cep = $1, logradouro = $2, numero = $3, complemento = $4, bairro = $5,
+             cidade = $6, uf = $7 where id = $8 RETURNING *`,
+        [cep, logradouro, numero, complemento, bairro, cidade, uf, endereco.id])
         return rows[0];
     }
 

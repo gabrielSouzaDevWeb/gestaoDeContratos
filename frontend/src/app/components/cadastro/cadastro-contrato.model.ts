@@ -1,5 +1,6 @@
 export interface CadastroContrato {
   id?: number
+  prestadorId: number,
   CPFOrCNPJ: string,
   nome: string,
   servico: string,

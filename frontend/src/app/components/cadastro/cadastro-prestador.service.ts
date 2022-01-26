@@ -13,6 +13,7 @@ import { CadastroPrestador } from './cadastro-prestador.model'
 export class CadastroPrestadorService {
 
   baseUrl = "http://localhost:3001/prestadores"
+  baseUrlAdressesEnpoints = "http://localhost:3001/enderecos"
 
   constructor(private MatSnackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -41,9 +42,15 @@ export class CadastroPrestadorService {
   read(): Observable<CadastroPrestador[]> {
     return this.http.get<CadastroPrestador[]>(this.baseUrl)
   }
+
   ReadById(id: string): Observable<CadastroPrestador> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<CadastroPrestador>(url)
+  }
+
+  findCepViaCep(cep: string): Observable<any> {
+    const url = `${this.baseUrlAdressesEnpoints}/getCepData/${cep}`
+    return this.http.get<any>(url)
   }
 
   update(cadastroPrestador: CadastroPrestador): Observable<CadastroPrestador> {

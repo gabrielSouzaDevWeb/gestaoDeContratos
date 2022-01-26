@@ -43,7 +43,6 @@ export default class PrestadorRepository{
     }
 
     public async update(prestador: Prestador, prestadorId: Number | undefined) : Promise<Prestador>{
-        console.log('**************',prestadorId)
         let futureResult: Prestador
         const { rows } = await this.db.client.query(`UPDATE prestadores SET tipo = $1, cpf = $2, cnpj = $3, nome = $4, razao_social = $5, email = $6 where id = $7 RETURNING *`,
         [

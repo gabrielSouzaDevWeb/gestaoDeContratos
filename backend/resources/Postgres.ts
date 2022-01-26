@@ -6,7 +6,7 @@ export default class Postgres{
         user: "postgres",
         host: "localhost",
         database: "gestao_contratos",
-        password: "pausebreak",
+        password: "admin",
         port: 5432,
       };
 

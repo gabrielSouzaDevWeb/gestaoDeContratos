@@ -29,7 +29,7 @@ export default class PrestadorService {
                 const lastInsertedPrestador = insertedPrestador.id
                 const insertedEndereco = await this.enderecoService.create(endereco, lastInsertedPrestador)
                 const prestadorDto = new PrestadorDTO().fromEntity(insertedPrestador, insertedEndereco)
-                res.send(new CreateResponse(prestadorDto).getBody())
+                res.send(prestadorDto)
             })
     }
 
@@ -66,9 +66,13 @@ export default class PrestadorService {
     public update = (req: Request, res: Response) => {
         const prestadorId: number = Number.parseInt(req.params.prestadorId)
         const prestador: Prestador = new PrestadorDTO(req.body).toEntity()
+        const endereco: Endereco = new EnderecoDTO(req.body.endereco).toEntity()
         this.prestadorRepository.update(prestador, prestadorId)
-            .then(result => {
-                res.send(new UpdatedResponse(result).getBody())
+            .then(async updatedPrestador => {
+                console.log("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨",endereco)
+                const updatedEndereco = await this.enderecoService.update(endereco)
+                const prestadorDto = new PrestadorDTO().fromEntity(updatedPrestador, updatedEndereco)
+                res.send(prestadorDto)
             })
     }
 

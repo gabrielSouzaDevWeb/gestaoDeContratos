@@ -19,7 +19,7 @@ export default class EnderecoService {
     public async getCepDataViaCep(req: Request, res: Response){
         const cep: number = Number.parseInt(req.params.cep)
         axios.get(`https://viacep.com.br/ws/${cep}/json/`).then(result => {
-            res.send(new CollectionResponse(result.data).getBody())
+            res.send(result.data)
         })
     }
 
@@ -39,7 +39,7 @@ export default class EnderecoService {
     }
 
     public update = (endereco: Endereco) => {
-        return this.enderecoRepository.update(endereco, endereco.id)
+        return this.enderecoRepository.update(endereco)
     }
 
     public delete = (enderecoId?: number) => {
