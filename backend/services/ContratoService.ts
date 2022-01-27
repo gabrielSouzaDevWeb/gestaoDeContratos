@@ -3,10 +3,8 @@ import ContratoDTO from "../dtos/ContratoDTO";
 import Contrato from "../models/Contrato";
 import Prestador from "../models/Prestador";
 import ContratoRepository from "../repositories/ContratoRepository";
-import CollectionResponse from "../resources/customResponses/CollectionResponse";
 import CreateResponse from "../resources/customResponses/CreatedResponse";
 import DeletedResponse from "../resources/customResponses/DeletedResponse";
-import UpdatedResponse from "../resources/customResponses/UpdatedResponse";
 
 export default class ContratoService {
 
@@ -21,6 +19,8 @@ export default class ContratoService {
         this.contratoRepository.create(contrato)
         .then(result =>{
             res.send(new CreateResponse(new ContratoDTO().fromEntity(result)).getBody())
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
 
@@ -33,6 +33,8 @@ export default class ContratoService {
                 return new ContratoDTO().fromEntity(contrato, prestador)
             })
             res.send(mergedEntities)
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
 
@@ -47,6 +49,8 @@ export default class ContratoService {
                 return new ContratoDTO().fromEntity(contrato, prestador)
             })
             res.send(mergedEntities[0])
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
 
@@ -56,6 +60,8 @@ export default class ContratoService {
         this.contratoRepository.update(contrato, contratoId)
         .then(result =>{
             res.send(result)
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
 
@@ -64,6 +70,8 @@ export default class ContratoService {
         this.contratoRepository.delete(contratoId)
         .then(result =>{
             res.send(new DeletedResponse().getBody())
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
     

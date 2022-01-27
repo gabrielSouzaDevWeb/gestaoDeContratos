@@ -1,0 +1,35 @@
+mat-card-title{
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.flexitens{
+    display: flex;
+    justify-content: space-around;
+    padding:4vh 0 4vh 0;
+
+}
+.matcard{
+    padding: 0;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    
+}
+.mat-icon{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+i{
+    font-size: 14.5em;
+    color: white;
+}
+.matcard__number{  
+    font-size: 8em;
+    color: #111;
+    margin-left: 0.5em;
+}

@@ -20,6 +20,8 @@ export default class EnderecoService {
         const cep: number = Number.parseInt(req.params.cep)
         axios.get(`https://viacep.com.br/ws/${cep}/json/`).then(result => {
             res.send(result.data)
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
 
@@ -27,6 +29,8 @@ export default class EnderecoService {
         this.enderecoRepository.read()
         .then(result => {
             res.send(new CollectionResponse(result).getBody())
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
 
@@ -35,6 +39,8 @@ export default class EnderecoService {
         this.enderecoRepository.findById(enderecoId)
         .then(result =>{
             res.send(new CollectionResponse(result).getBody())
+        }).catch(err => {
+            res.status(500).send(err)
         })
     }
 

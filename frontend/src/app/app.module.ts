@@ -41,6 +41,7 @@ import { CadastroPrestadorDeleteComponent } from './components/cadastro/cadastro
 import { DateAdapter, MatOptionModule, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     CadastroPrestadorUpdateComponent,
     CadastroContratoUpdateComponent,
     CadastroContratoDeleteComponent,
-    CadastroPrestadorDeleteComponent
+    CadastroPrestadorDeleteComponent,
+    DashboardComponent
 
   ],
   imports: [

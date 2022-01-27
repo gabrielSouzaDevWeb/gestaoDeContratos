@@ -11,7 +11,7 @@ export class PrestadoresCrudComponent implements OnInit {
 
   constructor(private router : Router,private headerService: HeaderService) {
     headerService.headerData = {
-      title: 'Cadastro de contratos',
+      title: 'Cadastro de prestadores',
       icon: 'assignment',
       routeUrl: "/prestadores"
     }

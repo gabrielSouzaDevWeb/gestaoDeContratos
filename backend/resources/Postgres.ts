@@ -1,3 +1,4 @@
+import { response } from "express";
 import { Client } from "pg"
 
 export default class Postgres{
@@ -12,14 +13,15 @@ export default class Postgres{
 
     public client: Client = new Client(this.credentials);
 
-
     constructor(){
         this.init()
     }
 
     private async init(){
-        await this.client.connect()
+        try{
+            await this.client.connect()
+        }catch(err){
+            console.log(err)
+        }
     }
-
-
 }

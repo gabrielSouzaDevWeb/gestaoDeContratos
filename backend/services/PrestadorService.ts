@@ -30,6 +30,8 @@ export default class PrestadorService {
                 const insertedEndereco = await this.enderecoService.create(endereco, lastInsertedPrestador)
                 const prestadorDto = new PrestadorDTO().fromEntity(insertedPrestador, insertedEndereco)
                 res.send(prestadorDto)
+            }).catch(err => {
+                res.status(500).send(err)
             })
     }
 
@@ -45,6 +47,8 @@ export default class PrestadorService {
                 })
                 //res.send(new CollectionResponse(mergedEntities).getBody())
                 res.send(mergedEntities)
+            }).catch(err => {
+                res.status(500).send(err)
             })
     }
 
@@ -60,6 +64,8 @@ export default class PrestadorService {
                     return new PrestadorDTO().fromEntity(prestador, endereco)
                 })
                 res.send(mergedEntities[0])
+            }).catch(err => {
+                res.status(500).send(err)
             })
     }
 
@@ -69,10 +75,11 @@ export default class PrestadorService {
         const endereco: Endereco = new EnderecoDTO(req.body.endereco).toEntity()
         this.prestadorRepository.update(prestador, prestadorId)
             .then(async updatedPrestador => {
-                console.log("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨",endereco)
                 const updatedEndereco = await this.enderecoService.update(endereco)
                 const prestadorDto = new PrestadorDTO().fromEntity(updatedPrestador, updatedEndereco)
                 res.send(prestadorDto)
+            }).catch(err => {
+                res.status(500).send(err)
             })
     }
 
@@ -83,6 +90,8 @@ export default class PrestadorService {
                 const lastDeletedPrestador = result.id
                 await this.enderecoService.delete(lastDeletedPrestador)
                 res.send(new DeletedResponse().getBody())
+            }).catch(err => {
+                res.status(500).send(err)
             })
     }
 
