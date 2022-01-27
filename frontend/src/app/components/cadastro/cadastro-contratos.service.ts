@@ -10,7 +10,7 @@ import { CadastroContrato } from './cadastro-contrato.model';
 
 export class CadastroContratosService {
 
-  baseUrl = "http://localhost:3001/contratos"
+  baseUrl = "api/contratos"
 
   constructor(private MatSnackBar: MatSnackBar, private http: HttpClient) { }
 

@@ -12,8 +12,8 @@ import { CadastroPrestador } from './cadastro-prestador.model'
 
 export class CadastroPrestadorService {
 
-  baseUrl = "http://localhost:3001/prestadores"
-  baseUrlAdressesEnpoints = "http://localhost:3001/enderecos"
+  baseUrl = "api/prestadores"
+  baseUrlAdressesEnpoints = "api/enderecos"
 
   constructor(private MatSnackBar: MatSnackBar, private http: HttpClient) { }
 
