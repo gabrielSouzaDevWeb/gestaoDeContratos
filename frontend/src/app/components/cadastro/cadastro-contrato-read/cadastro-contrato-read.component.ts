@@ -18,7 +18,6 @@ export class CadastroContratoReadComponent implements OnInit {
   ngOnInit(): void {
     this.cadastroContratosService.read().subscribe(cadastroContratos =>{
       this.cadastroContrato = cadastroContratos
-      
     })
   }
 

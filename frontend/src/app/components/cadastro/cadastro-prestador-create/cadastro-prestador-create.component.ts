@@ -17,7 +17,7 @@ export class CadastroPrestadorCreateComponent implements OnInit {
 
   cadastroPrestador: CadastroPrestador = {
 
-    tipo: "",
+    tipo: "F",
     CPFOrCNPJ: "",
     nome: "",
     email: "",

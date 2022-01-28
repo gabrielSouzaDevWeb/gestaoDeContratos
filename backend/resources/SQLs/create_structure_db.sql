@@ -25,14 +25,14 @@ CREATE TABLE IF NOT EXISTS public.prestadores_enderecos
     cidade character varying NOT NULL,
     uf character(2) NOT NULL,
     id bigint NOT NULL GENERATED ALWAYS AS IDENTITY,
-    prestador_id bigint NOT NULL,
+    prestador_id bigint,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS public.contratos
 (
     id bigint NOT NULL GENERATED ALWAYS AS IDENTITY,
-    prestador_id bigint NOT NULL,
+    prestador_id bigint,
     servico_prestado character varying NOT NULL,
     data_inicio date NOT NULL,
     data_fim date NOT NULL,
@@ -43,7 +43,7 @@ ALTER TABLE IF EXISTS public.prestadores_enderecos
     ADD CONSTRAINT prestadores_fk FOREIGN KEY (prestador_id)
     REFERENCES public.prestadores (id) MATCH SIMPLE
     ON UPDATE NO ACTION
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     NOT VALID;
 
 
@@ -51,7 +51,7 @@ ALTER TABLE IF EXISTS public.contratos
     ADD CONSTRAINT prestador_fk FOREIGN KEY (prestador_id)
     REFERENCES public.prestadores (id) MATCH SIMPLE
     ON UPDATE NO ACTION
-    ON DELETE SET NULL
+    ON DELETE NO ACTION
     NOT VALID;
 
 END;

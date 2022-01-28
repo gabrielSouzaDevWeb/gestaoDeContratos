@@ -9,16 +9,19 @@ import CollectionResponse from "../resources/customResponses/CollectionResponse"
 import CreateResponse from "../resources/customResponses/CreatedResponse";
 import DeletedResponse from "../resources/customResponses/DeletedResponse";
 import UpdatedResponse from "../resources/customResponses/UpdatedResponse";
+import ContratoService from "./ContratoService";
 import EnderecoService from "./EnderecoService";
 
 export default class PrestadorService {
 
     private prestadorRepository: PrestadorRepository;
     private enderecoService: EnderecoService;
+    private contratoService: ContratoService;
 
     constructor() {
         this.prestadorRepository = new PrestadorRepository();
         this.enderecoService = new EnderecoService();
+        this.contratoService = new ContratoService();
     }
 
     public create = (req: Request, res: Response) => {
@@ -94,5 +97,5 @@ export default class PrestadorService {
                 res.status(500).send(err)
             })
     }
-
 }
+

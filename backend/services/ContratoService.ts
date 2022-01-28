@@ -74,5 +74,4 @@ export default class ContratoService {
             res.status(500).send(err)
         })
     }
-    
 }

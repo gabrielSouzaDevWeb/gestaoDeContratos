@@ -38,7 +38,6 @@ export default class PrestadorDTO{
             razao_social: this.tipo === 'J' ? this.nome : undefined,
             email: this.email
         };
-        console.log(prestador)
         return prestador
     }
 
