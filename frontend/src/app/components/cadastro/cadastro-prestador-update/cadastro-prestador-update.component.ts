@@ -21,8 +21,7 @@ export class CadastroPrestadorUpdateComponent implements OnInit {
     private router : Router,
     private route:ActivatedRoute) { }
 
-  cadastroPrestador: CadastroPrestador ={
-    
+  cadastroPrestador: CadastroPrestador = {
     tipo: "",
     CPFOrCNPJ: "",
     nome: "",
@@ -40,20 +39,20 @@ export class CadastroPrestadorUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.cadastroPrestadorService.ReadById(`${id}`).subscribe(cadastroPrestador=>{
+    this.cadastroPrestadorService.ReadById(`${id}`).subscribe(cadastroPrestador => {
       this.cadastroPrestador = cadastroPrestador
+      this.selectTipoPrestador.setValue('F')
     })
 
     this.cep.valueChanges.subscribe(cep => {
-      console.log(cep)
       if(String(cep).length === 8){
         this.cadastroPrestadorService.findCepViaCep(cep).subscribe(result => {
-          if(result.data.erro !== undefined){
+          if(result.erro !== undefined){
             this.cepNaoEncontrado = true
           }else{
             this.cadastroPrestador.endereco.logradouro = result.logradouro
             this.cadastroPrestador.endereco.bairro = result.bairro
-            this.cadastroPrestador.endereco.complemento =result.complemento
+            this.cadastroPrestador.endereco.complemento = result.complemento
             this.cadastroPrestador.endereco.bairro = result.bairro
             this.cadastroPrestador.endereco.cidade = result.localidade
             this.cadastroPrestador.endereco.UF = result.uf
@@ -62,6 +61,7 @@ export class CadastroPrestadorUpdateComponent implements OnInit {
       }
     })
     this.selectTipoPrestador.valueChanges.subscribe(tipo => {
+      console.log(tipo)
       this.cadastroPrestador.tipo = tipo
     })
   }

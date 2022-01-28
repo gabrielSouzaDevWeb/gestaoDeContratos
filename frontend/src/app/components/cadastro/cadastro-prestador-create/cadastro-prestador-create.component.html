@@ -4,11 +4,11 @@
         <div class="form__line">
             <mat-form-field appearance="fill">
                 <mat-label>Tipo</mat-label>
-                <mat-select [formControl]="selectTipoPrestador">
+                <mat-select [formControl]="selectTipoPrestador" >
                     <mat-option  [value]="'F'">
                         CPF
                     </mat-option>
-                    <mat-option  [value]="'J'">
+                    <mat-option  value="'J'">
                         CNPJ
                     </mat-option>
                 </mat-select>

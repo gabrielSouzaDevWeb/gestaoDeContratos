@@ -35,6 +35,7 @@ export class CadastroPrestadorCreateComponent implements OnInit {
   constructor(private cadastroPrestadorService: CadastroPrestadorService, private router: Router) { }
 
   ngOnInit(): void {
+    this.selectTipoPrestador.setValue('F')
     this.cep.valueChanges.subscribe(cep => {
       if (String(cep).length === 8) {
         this.cadastroPrestadorService.findCepViaCep(cep).subscribe(result => {
